@@ -1,0 +1,26 @@
+{
+    "name": "SQLInjectionRule",
+    "priority": 1,
+    "action": {
+      "block": {}
+    },
+    "statement": {
+      "sqliMatchStatement": {
+        "fieldToMatch": {
+          "body": {}
+        },
+        "textTransformations": [
+          {
+            "priority": 0,
+            "type": "NONE"
+          }
+        ]
+      }
+    },
+    "visibilityConfig": {
+      "cloudwatchMetricsEnabled": true,
+      "metricName": "SQLInjectionRule",
+      "sampledRequestsEnabled": true
+    }
+  }
+  

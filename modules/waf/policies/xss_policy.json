@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "XSSProtection",
+        "Effect": "Allow",
+        "Action": "waf:CreateWebACL",
+        "Resource": "*",
+        "Condition": {
+          "StringLike": {
+            "aws:RequestTag/XSSProtectionEnabled": "true"
+          }
+        }
+      },
+      {
+        "Sid": "BlockXSSPatterns",
+        "Effect": "Deny",
+        "Action": "waf:CreateRule",
+        "Resource": "*",
+        "Condition": {
+          "StringLike": {
+            "aws:RequestTag/PatternMatch": "*<script>*"
+          }
+        }
+      }
+    ]
+  }
+  

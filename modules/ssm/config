@@ -1,0 +1,4 @@
+Host bastion
+  HostName 43.202.67.92
+  User ubuntu
+  IdentityFile "C:\Users\user\Desktop\AWS_pro\project\modules\bastion\bastion.pem"
